@@ -1,37 +1,60 @@
-// import React from 'react';
-import { IoSearch } from "react-icons/io5";
+import "./Navbar.css"
+import { RiArrowDownSLine } from "react-icons/ri";
 
-function Navbar() {
+import { FiSearch } from "react-icons/fi";
+import { RxHamburgerMenu } from "react-icons/rx";
+const Navbar = () => {
   return (
-    <div className='flex items-center justify-between space-x-4 py-3'>
-      <div className='flex space-x-4'>
-      <div className='flex space-x-2'>
-        <h1 className='text-gray-800 font-semibold text-3xl font-sans'>KODE</h1>
-        <h1 className='text-cyan-950 font-semibold text-3xl font-sans'>VORTEX</h1>
+    <nav className="flex w-full justify-between space-x-3 pt-4 items-center font-sans ">
+
+      <div className="flex items-center w-[60%]">
+          <img src="../../../public/Logo2_2.png" alt="logo" className="w-44 pt-2 img1" />
+        
+
+          <img src="../../../public/logo3.png" alt="logo" className="w-10 img2  mr-2" />
+       
+          <div id="searchbar" className="">
+            
+            <div className="xl:flex sm:hidden xl:flex-row relative   w-full">
+              
+              <input className="h-9 w-80 rounded-lg text-sm bg-zinc-800 text-white focus:outline-0 pl-8" placeholder="What do you want to learn today?"  type="search" name="search" id="search" />
+              <FiSearch className="absolute top-3  left-2 text-white text-bold"/>
+            </div>
+
+            <div className="sm:ml-4 md:ml-0  xl:hidden relative sm:flex sm:flex-row sm:w-72 md:w-full">
+              
+              <input className="h-9 sm:w-80 md:w-[265px] rounded-lg bg-zinc-800 text-white focus:outline-0 px-8" placeholder="Search"  type="text" name="search" id="search" />
+              <FiSearch className="absolute top-3  left-2 text-white text-bold"/>
+            </div>
+          </div>
+
       </div>
 
-      <div className='relative flex-1'>
-        <form action="/action_page.php" className='flex items-center'>
-          <IoSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white text-xl" />
-          <input className='bg-zinc-800 w-96 text-white text-xl rounded-lg pl-10 py-2 ' type="text" placeholder="What do you want to learn today?" name="search" />
-        </form>
+      <div className="flex items-center justify-end space-x-3 w-[50%] " id="services">
+        <div className=" flex font-sans space-x-4 text-sm text-white">
+          <h1>Trainings</h1>
+          <h1>Services</h1>
+          <h1>Log In</h1>
+        </div>
+        <button className="px-3 py-1 rounded-full text-sm text-white font-semibold signupcolor">
+          Sign Up
+        </button>
       </div>
+    <div className="flex space-x-4">
+
+      <div  className="text-white " id="browse">
+        <h1 className="text-white flex items-center gap-x-2 ">Browse <RiArrowDownSLine className="text-xl"/> </h1>  
+        
       </div>
 
-     <div className='flex items-center space-x-3'>
-     <ul className="flex space-x-4 list-none text-lg font-sans">
-        <li className="text-white">Trainings</li>
-        <li className="text-white">Services</li>
-        <li className="text-white">Log In</li>
-      </ul>
+      <div id="ham" className="w-[50%]">
 
-      <button className="bg-cyan-900 hover:bg-cyan-950 text-xl text-white font-bold py-1 px-4 rounded-full">
-        Sign Up
-      </button>
-     </div>
+        <RxHamburgerMenu className="text-white text-2xl font-bold "/>
+      </div>
     </div>
-  );
+      
+    </nav>
+  )
 }
 
-export default Navbar;
- 
+export default Navbar

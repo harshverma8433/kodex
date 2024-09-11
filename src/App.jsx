@@ -6,19 +6,18 @@ import ServicesSection from "./Components/ServicesSection/ServicesSection";
 import Navbar from "./Components/Navbar/Navbar";
 import HeroPage from "./Components/HeroPage/HeroPage";
 import AboutUsSectioon from "./Components/AboutUsSection/AboutUsSection"
-import GradientColor from "./Components/GradientColor/GradientColor";
+import GradientColorRight from "./Components/GradientColor/GradientColorRight";
+
 
 const App = () => {
   return (
-    <div className="bg-black min-h-screen px-[15%]">
-      <Navbar/>
-      <GradientColor top="60%" pos="right" />
-      <HeroPage/>
-      <Training/>
-      <GradientColor top="170%" pos="left" />
+    <div className="bg-black min-h-screen px-[15%] overflow-hidden">
+        <Navbar/>
+        <HeroPage />
+        
+        <Training/>
       <ServicesSection/>
       <AboutUsSectioon/>
-      <GradientColor top="260%" pos="right" />
       <Footer />
     </div>
   );

@@ -22,6 +22,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTypewriter } from "react-simple-typewriter";
+import GradientColorRight from '../GradientColor/GradientColorRight';
 
 
 const AboutUsSection = () => {
@@ -39,7 +40,8 @@ const AboutUsSection = () => {
       deleteSpeed: 80
 })
     return (
-      <div className="p-4 md:p-8 mt-16 lg:p-12">
+      <div className='relative flex'>
+        <div className="p-4 md:p-8 mt-16 lg:p-12">
         <motion.h1
           className="text-white text-center pb-4 text-2xl md:text-3xl lg:text-4xl font-mono tracking-wider"
           initial={{ opacity: 0, y: -50 }}
@@ -72,6 +74,8 @@ const AboutUsSection = () => {
         </motion.div>
 
         <hr className='h-2 w-full mb-[5%] mt-[10%]'/>
+      </div>
+      <GradientColorRight top="45%"/>
       </div>
   )
 }

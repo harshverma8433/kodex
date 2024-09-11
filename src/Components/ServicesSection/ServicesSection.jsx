@@ -56,7 +56,7 @@ const ServicesSection = () => {
   
   return (
     
-    <div ref={ref} className="mt-[8%]">
+    <div ref={ref} className="mt-[20%]">
     <motion.h1
       className="text-white text-center pb-[3%] text-3xl font-mono tracking-wider"
       initial={{ opacity: 0, y: -30 }}

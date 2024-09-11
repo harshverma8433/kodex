@@ -1,39 +1,3 @@
-// import "./Training.css"
-
-// function Training() {
-//   return (
-//     <div className="container text-center mt-5">
-//       <div className="row justify-content-center">
-//         <div className="col-12">
-//           <div className="horizontal-band mx-auto"></div>
-//         </div>
-//       </div>
-//       <h2 className="text-white my-4">TRAININGS</h2>
-//       <div className="row justify-content-center">
-//         <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
-//           <div className="training-card p-4">
-//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel.</p>
-//           </div>
-//         </div>
-//         <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
-//           <div className="training-card p-4">
-//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel.</p>
-//           </div>
-//         </div>
-//         <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
-//           <div className="training-card p-4">
-//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel.</p>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Training;
-
-
-
 
 // import React from 'react';
 import Carousel from "react-multi-carousel";
@@ -41,6 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./Training.css"
+import GradientColorLeft from "../GradientColor/GradientColorLeft";
   
   const Training = () => {
 
@@ -136,6 +101,7 @@ import "./Training.css"
           ))}
         </Carousel>
       </div>
+      <GradientColorLeft top="155%" />
       </div>
     )
   }
